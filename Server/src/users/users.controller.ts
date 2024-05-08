@@ -13,7 +13,7 @@ export class UsersController {
     return this.usersService.register(createUserDto);
   }
 
-  @Get('/login')
+  @Post('/login')
   login(@Body() loginUserDto: LoginUserDto) {
     return this.usersService.login(loginUserDto)
   }
