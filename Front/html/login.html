@@ -26,19 +26,19 @@
             <form action="#">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
+                    <input type="email" required id="email">
                     <label>Correo Electronico</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
+                    <input type="password" required id="password">
                     <label>Contraseña</label>
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox">Recuerdame</label>
                     
                 </div>
-                <button type="submit" class="btn">Ingresar</button>
+                <button type="submit" class="btn" id="login">Ingresar</button>
                 <div class="login-register">
                     <p>¿Es tu primera vez? <a href="#" class="register-link">Registrate</a></p>
                 </div>
@@ -54,24 +54,24 @@
                 <div class="input-box-group">
                     <div class="input-box">
                         <span class="icon"><ion-icon name="person"></ion-icon></span>
-                        <input type="text" required>
+                        <input type="text" required id="newName">
                         <label>Nombre completo</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="id-card"></ion-icon></span>
-                        <input type="text" required>
+                        <input type="text" required id="newCedula">
                         <label>Cedula</label>
                     </div>
                 </div>
                 <div class="input-box-group">
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" required>
+                        <input type="email" required id="newEmail">
                         <label>Correo Electronico</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="text" required>
+                        <input type="text" required id="newPassword">
                         <label>Contraseña</label>
                     </div>
                 </div>
@@ -79,15 +79,16 @@
                     <label><input type="checkbox">Acepto los terminos y condiciones</label>
                     
                 </div>
-                <button type="submit" class="btn">Registrarme</button>
+                <button type="submit" class="btn" id="register">Registrarme</button>
                 <div class="login-register">
-                    <p>¿Ya tienes una cuenta? <a href="#" class="login-link">Inicia sesión</a></p>
+                    <p>¿Ya tienes una cuenta? <a href=" #" class="login-link">Inicia sesión</a></p>
                 </div>
             </form>
         </div>
     
     </div>
     <script src="../js/login.js"></script>
+    <script src="../js/MandarDatos.js" type="module"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

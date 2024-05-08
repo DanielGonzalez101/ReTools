@@ -1,37 +1,36 @@
 import axios from 'https://cdn.skypack.dev/axios'
 
-document.getElementById('add').addEventListener('click', async () => {
-  const NombreCompleto = document.getElementById('NombreCompleto').value
-  const Contrasena = document.getElementById('Contrasena').value
-  const Correo = document.getElementById('Correo').value
-  const Cedula = document.getElementById('Cedula').value
+document.getElementById('register').addEventListener('click', async () => {
+  const wrapper  = document.querySelector('.wrapper');
+  const name = document.getElementById('newName').value
+  const password = document.getElementById('newPassword').value
+  const email = document.getElementById('newEmail').value
+  const cedula = document.getElementById('newCedula').value
+
 
   try {
-    const response = await axios.post('http://localhost:3100/api/registrar', {
-      NombreCompleto,
-      Contrasena,
-      Correo,
-      Cedula,
+    const response = await axios.post('http://localhost:3100/users/register', {
+      name,password,email,cedula
     })
-
-    alert(response.data.msg)
+    alert(response.data)
+    wrapper.classList.remove('active');
   } catch (error) {
-    console.error(error)
+    alert(error.response.data.message)
   }
 })
 
 document.getElementById('login').addEventListener('click', async () => {
-  const Correo = document.getElementById('correo').value
-  const Contrasena = document.getElementById('contrasena').value
+  const email = document.getElementById('email').value
+  const password = document.getElementById('password').value
+
 
   try {
-    const response = await axios.post('http://localhost:3100/api/Login', {
-      Contrasena,
-      Correo,
+    await axios.post('http://localhost:3100/users/login', {
+      email,
+      password
     })
-
-    alert("Usuario encontrado", response)
+    window.location.href = "productos.html"
   } catch (error) {
-    console.error(error)
+    alert(error.response.data.message)
   }
 })
