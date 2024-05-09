@@ -16,7 +16,7 @@ function mostrarProductos(productos) {
     listProducts.innerHTML = ''
     productos.forEach((producto) => {
         listProducts.innerHTML += `
-            <div class="item"> 
+            <div class="item" onclick = "window.location.href = 'detallesProductos.html'"> 
                 <img src="${producto.img}" alt="" class="img-item">
                 <span class="titulo-item">${producto.name}</span>
                 <span class="precio-item">$${producto.price}</span>   
